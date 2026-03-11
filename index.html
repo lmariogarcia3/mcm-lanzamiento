@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Reporte de Lanzamiento · Marketing con Melissa</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Reporte de Lanzamiento · Marketing con Melissa">
+<meta property="og:description" content="Masterclass Canva Boost - Marzo 2026">
+<meta property="og:image" content="https://cdn.prod.website-files.com/686845e4f014474f55426d71/686a98683d8af2c84ace465b_Marketing%20con%20Melissa%20opengraph.webp">
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --purple: #5B2DB0;
+  --purple-m: #7B4FCF;
+  --purple-xl: #EDE6FA;
+  --ink: #1A1423;
+  --ink-2: #4A4157;
+  --ink-3: #8C85A0;
+  --line: #E8E3F2;
+  --bg: #F7F5FC;
+  --white: #FFFFFF;
+  --alert: #C0392B;
+  --alert-bg: #FDF2F2;
+  --warn: #B8540A;
+  --warn-bg: #FEF6EE;
+  --success: #1A7A4A;
+  --success-bg: #F0FDF4;
+}
+
+body {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.site-header {
+  background: var(--white);
+  border-bottom: 2px solid var(--ink);
+  padding: 0 2rem;
+  height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 100;
+}
+.site-logo { font-weight: 700; font-size: 12px; color: var(--purple); letter-spacing: 0.14em; text-transform: uppercase; }
+.site-badge {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--alert);
+}
+
+.hero { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 2rem; }
+.hero-label {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--purple); margin-bottom: 0.9rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.hero-label::after { content:''; flex:1; height:1px; background: var(--line); }
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 800; color: var(--ink);
+  line-height: 1.15; margin-bottom: 0.5rem; letter-spacing: -0.02em;
+}
+.hero-sub { color: var(--ink-3); font-size: 0.85rem; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.6rem; }
+.chip {
+  font-size: 0.72rem; color: var(--ink-2);
+  border: 1px solid var(--line); border-radius: 6px;
+  padding: 4px 10px; background: var(--white);
+}
+.chip.hi { color: var(--purple); border-color: var(--purple-xl); background: var(--purple-xl); font-weight: 600; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 0 2rem 3rem; }
+
+section { margin-bottom: 2.5rem; }
+.sec-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--ink-3);
+  margin-bottom: 0.6rem; padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--line);
+}
+.sec-title { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin-bottom: 1.2rem; letter-spacing: -0.01em; }
+
+.stat-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  gap: 1px; background: var(--line);
+  border: 1px solid var(--line); border-radius: 12px;
+  overflow: hidden; margin-bottom: 1.2rem;
+}
+.stat-cell { background: var(--white); padding: 1.4rem 1.5rem; text-align: center; }
+.stat-val { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; margin-bottom: 0.35rem; }
+.stat-val.g { color: var(--success); }
+.stat-val.b { color: var(--purple); }
+.stat-val.a { color: var(--warn); }
+.stat-val.r { color: var(--alert); }
+.stat-lbl { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+
+.card {
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: 10px; padding: 1.5rem 1.6rem; margin-bottom: 1rem;
+}
+.card-hd { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.9rem; }
+.card p { font-size: 13px; color: var(--ink-2); line-height: 1.75; }
+.card p + p { margin-top: 0.75rem; }
+
+.alert {
+  border-radius: 8px; border: 1px solid var(--line); border-left: 4px solid;
+  background: var(--white); padding: 1.1rem 1.4rem; margin-bottom: 0.9rem;
+}
+.alert.red   { border-left-color: var(--alert); background: var(--alert-bg); }
+.alert.amber { border-left-color: var(--warn); background: var(--warn-bg); }
+.alert.green { border-left-color: var(--success); background: var(--success-bg); }
+.alert.blue  { border-left-color: var(--purple); background: var(--purple-xl); }
+.alert-hd { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.45rem; }
+.alert.red   .alert-hd { color: var(--alert); }
+.alert.amber .alert-hd { color: var(--warn); }
+.alert.green .alert-hd { color: var(--success); }
+.alert.blue  .alert-hd { color: var(--purple); }
+.alert p { font-size: 13px; color: var(--ink-2); line-height: 1.7; }
+
+.funnel { margin: 0.5rem 0 0.2rem; }
+.f-row { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 0.6rem; }
+.f-lbl { font-size: 12px; color: var(--ink-3); width: 155px; flex-shrink: 0; text-align: right; }
+.f-track { flex:1; height:24px; background: var(--purple-xl); border:1px solid var(--line); border-radius:4px; overflow:hidden; }
+.f-bar { height:100%; border-radius:4px; display:flex; align-items:center; padding-left:8px; font-size:11px; font-weight:600; color:#fff; width:0; transition:width 1.1s cubic-bezier(.4,0,.2,1); }
+.f-bar.c1 { background: var(--success); }
+.f-bar.c2 { background: var(--purple); }
+.f-bar.c3 { background: var(--warn); }
+.f-bar.c4 { background: #E67E22; }
+.f-bar.c5 { background: var(--alert); }
+.f-note { font-size:11px; color: var(--ink-3); margin-top:0.5rem; font-style:italic; }
+
+ul.bl { list-style:none; margin:0.5rem 0; }
+ul.bl li { display:flex; gap:0.7rem; font-size:13px; color: var(--ink-2); line-height:1.65; margin-bottom:0.5rem; align-items:flex-start; }
+ul.bl li::before { content:'›'; color: var(--purple); font-size:1rem; flex-shrink:0; }
+
+.opinion {
+  background: var(--purple-xl); border: 1px solid var(--line);
+  border-radius: 8px; padding: 0.7rem 1.1rem;
+  font-size: 12px; color: var(--ink-2); margin-bottom: 1rem; font-style: italic;
+}
+
+.tbl-wrap { background: var(--white); border:1px solid var(--line); border-radius:10px; overflow:hidden; margin-bottom:1rem; }
+table { width:100%; border-collapse:collapse; }
+thead tr { border-bottom:1px solid var(--line); }
+th { font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color: var(--ink-3); padding:0.75rem 1.1rem; text-align:left; }
+td { padding:0.85rem 1.1rem; font-size:13px; color: var(--ink-2); border-bottom:1px solid var(--line); vertical-align:top; }
+tr:last-child td { border-bottom:none; }
+tr:hover td { background: var(--bg); }
+td.num { color: var(--ink-3); font-size:12px; }
+
+.pill { display:inline-block; border-radius:100px; font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:2px 8px; }
+.pill.r { background: var(--alert-bg); color: var(--alert); border:1px solid var(--alert); }
+.pill.a { background: var(--warn-bg); color: var(--warn); border:1px solid var(--warn); }
+.pill.m { background: var(--success-bg); color: var(--success); border:1px solid var(--success); }
+
+hr { border:none; border-top:1px solid var(--line); margin:2.5rem 0; }
+
+footer { border-top:1px solid var(--line); padding:2rem; text-align:center; font-size:11px; color: var(--ink-3); background: var(--white); }
+footer strong { color: var(--purple); }
+
+.anim { opacity:0; transform:translateY(14px); transition:opacity .55s ease,transform .55s ease; }
+.anim.in { opacity:1; transform:none; }
+
+@media(max-width:600px){
+  .site-header,.hero,.page-wrap { padding-left:1.2rem; padding-right:1.2rem; }
+  .f-lbl { width:100px; font-size:0.68rem; }
+  th,td { padding:0.6rem 0.7rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <span class="site-logo">Marketing con Melissa</span>
+  <span class="site-badge">Confidencial</span>
+</header>
+
+<div class="hero anim">
+  <div class="hero-label">Reporte de Lanzamiento</div>
+  <h1>Masterclass Canva Boost<br>Marzo 2026</h1>
+  <p class="hero-sub">Análisis post-evento · Observaciones propias + feedback del equipo</p>
+  <div class="hero-meta">
+    <span class="chip hi">12,000 usuarios en pico</span>
+    <span class="chip hi">Mejor tráfico en la historia de MkMelissa</span>
+    <span class="chip">Marzo 2026</span>
+  </div>
+</div>
+
+<div class="page-wrap">
+
+  <!-- 01 RESUMEN -->
+  <section class="anim">
+    <div class="sec-label">01 · Resumen ejecutivo</div>
+    <div class="sec-title">Lo que pasó</div>
+    <div class="stat-grid">
+      <div class="stat-cell"><div class="stat-val g">12K</div><div class="stat-lbl">Pico de usuarios</div></div>
+      <div class="stat-cell"><div class="stat-val b">~80%</div><div class="stat-lbl">Retención inicial</div></div>
+      <div class="stat-cell"><div class="stat-val a">~5K</div><div class="stat-lbl">Al inicio de oferta</div></div>
+      <div class="stat-cell"><div class="stat-val r">~1.2K</div><div class="stat-lbl">Al cierre del precio</div></div>
+    </div>
+    <div class="card">
+      <div class="card-hd">El panorama general</div>
+      <p>Fue el mejor lanzamiento en tráfico que ha tenido Marketing con Melissa. Llegamos a 12,000 usuarios en el pico, con una retención de alrededor del 80% en el primer bloque. Eso es un logro real y hay que reconocerlo.</p>
+      <p>El problema fue lo que pasó después. A partir del 70% del air time, el tráfico se desplomó en caída libre. Y lo más importante: ese crash se dio antes de llegar a la oferta. En lanzamientos anteriores el drop fuerte siempre viene cuando ya estás en el precio y la gente siente que viene el pitch. Acá no. Llegamos al inicio de la oferta con alrededor de 5,000 usuarios, y ya en el precio andábamos en 1,200. Sin haber llegado todavía a la oferta ya habíamos perdido más de la mitad.</p>
+      <p>La hipótesis es que los usuarios se desesperaron antes de recibir el valor que vinieron a buscar. El value arrancó muy tarde, la dinámica con la colaboradora cortaba el flujo constantemente, y eso se fue acumulando hasta que la gente se fue.</p>
+    </div>
+  </section>
+
+  <!-- 02 FUNNEL -->
+  <section class="anim">
+    <div class="sec-label">02 · Retención</div>
+    <div class="sec-title">Así se cayó el tráfico</div>
+    <div class="card">
+      <div class="card-hd">Usuarios a lo largo del live</div>
+      <div class="funnel">
+        <div class="f-row"><div class="f-lbl">Pico (~min 15)</div><div class="f-track"><div class="f-bar c1" data-w="100%">12,000</div></div></div>
+        <div class="f-row"><div class="f-lbl">Retención ~80%</div><div class="f-track"><div class="f-bar c2" data-w="80%">~9,600</div></div></div>
+        <div class="f-row"><div class="f-lbl">Crash / drop</div><div class="f-track"><div class="f-bar c3" data-w="42%">~5,000</div></div></div>
+        <div class="f-row"><div class="f-lbl">Inicio de oferta</div><div class="f-track"><div class="f-bar c4" data-w="42%">~5,000</div></div></div>
+        <div class="f-row"><div class="f-lbl">Cierre / precio</div><div class="f-track"><div class="f-bar c5" data-w="10%">~1,200</div></div></div>
+      </div>
+      <p class="f-note">* Cifras aproximadas basadas en observación del live. El crash ocurrió antes de llegar a la oferta, un patrón muy diferente a lanzamientos anteriores donde el drop viene después del precio.</p>
+    </div>
+  </section>
+
+  <!-- 03 TIMING -->
+  <section class="anim">
+    <div class="sec-label">03 · Timing del value</div>
+    <div class="sec-title">Los usuarios esperaron demasiado</div>
+    <div class="opinion">⚠ Observación: combinación de lo que vi en el live y lo que escuché del equipo. Es feedback para mejorar, no un juicio.</div>
+    <div class="alert red">
+      <div class="alert-hd">El value empezó hasta el minuto 30</div>
+      <p>Los primeros 30 minutos fueron básicamente warm-up y presentaciones. El chat se llenó de comentarios negativos: gente preguntando cuándo empezaba, quejándose de que ya se tardaron mucho. No fueron pocos comentarios.</p>
+    </div>
+    <div class="card">
+      <div class="card-hd">Por qué pasó</div>
+      <p>Al parecer el equipo pidió esperar porque traían errores mandando mensajes y tenían preocupación de que no llegara suficiente tráfico. Entiendo la lógica: si aún no ha llegado la gente, esperas un poco. Pero el efecto fue el contrario: los que ya estaban adentro se desesperaron y empezaron a irse.</p>
+      <p>Hay otro factor importante: Argentina es nuestro segundo mercado más grande y van 3 horas adelante de CDMX. A las 7PM en México ya son las 10PM allá. Cada minuto extra que hacemos esperar, los estamos haciendo quedarse más tarde.</p>
+    </div>
+    <div class="alert green">
+      <div class="alert-hd">✓ Regla para los próximos lanzamientos</div>
+      <p>Máximo <strong style="color:#fff">10 minutos</strong> de intro. Después, value directo, sin excepción. Si hay problemas de infraestructura, se resuelven antes del lanzamiento, no se parchean en vivo mientras la audiencia espera.</p>
+    </div>
+  </section>
+
+  <!-- 04 COLABORACION -->
+  <section class="anim">
+    <div class="sec-label">04 · Colaboración</div>
+    <div class="sec-title">La dinámica con Aurora no funcionó como se esperaba</div>
+    <div class="opinion">⚠ Observación personal de lo que vi en el live, no es un juicio a la persona, sino al formato.</div>
+    <div class="card">
+      <div class="card-hd">Lo que vi</div>
+      <p>El engagement de Melissa con la audiencia era bueno: la gente respondía, estaba conectada. Pero cada vez que entraba Aurora se cortaba ese hilo. Y no fue una intervención o dos: estuvo presente prácticamente durante toda la sesión.</p>
+      <p>El problema no es la persona, es el formato. Tener a dos personas todo el tiempo divide la atención y rompe el ritmo. Además, desde el inicio ya se hablaba del curso como producto, y en una masterclass de captación eso es lo último que quieres antes de haber entregado valor. Si desde el minuto uno suenas a vendedor, la gente se va.</p>
+    </div>
+    <div class="alert green">
+      <div class="alert-hd">✓ Sugerencia: nuevo formato de colaboraciones</div>
+      <p>Si vamos a traer a alguien como colaborador, que no esté toda la clase. La sugerencia es <strong style="color:#fff">dos intervenciones de 5 minutos cada una</strong>, con un tema claro y de puro valor. Dice lo que tiene que decir, entrega valor, y volvemos con Melissa. Sin plática extendida, sin mencionar el curso antes de que Melissa haya dado el contenido central.</p>
+    </div>
+  </section>
+
+  <!-- 05 WHATSAPP -->
+  <section class="anim">
+    <div class="sec-label">05 · Infraestructura WhatsApp</div>
+    <div class="sec-title">El esquema actual nos está costando caro</div>
+    <div class="alert red">
+      <div class="alert-hd">🔴 Esto causó el retraso de 30 minutos</div>
+      <p>El live empezó tarde porque el equipo estaba resolviendo en tiempo real problemas con los envíos: números bloqueados, integraciones fallando, funnel roto. Le bloquearon el número a Nancy y posiblemente a otros. Todo esto mientras la audiencia esperaba adentro del live.</p>
+    </div>
+    <div class="card">
+      <div class="card-hd">El problema de fondo</div>
+      <p>Se está operando con múltiples personas mandando mensajes desde cuentas personales o WhatsApp Business sin API, con números rotativos para evitar bloqueos. Meta detecta eso como spam y bloquea. No es mala suerte, es el resultado esperado de operar fuera del esquema oficial. Cada lanzamiento tiene el mismo riesgo mientras no se resuelva esto.</p>
+    </div>
+    <div class="alert green">
+      <div class="alert-hd">✓ Lo que tiene que cambiar</div>
+      <ul class="bl" style="margin-top:0.4rem">
+        <li>Un solo número verificado por Meta (WhatsApp Business API). Toda la comunicación centralizada ahí.</li>
+        <li>El equipo trabaja como agentes dentro del sistema, sin grupos paralelos ni links alternativos.</li>
+        <li>Se registra una tarjeta de pago. Meta cobra centavos por envío outbound. Es el costo de operar de forma profesional.</li>
+        <li>Los blasts se programan con días de anticipación. Nunca en caliente el día del lanzamiento.</li>
+        <li>Cero trucos para no pagar, solo generan bloqueos en el peor momento.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 06 LLAMADAS -->
+  <section class="anim">
+    <div class="sec-label">06 · Llamadas & SMS outbound</div>
+    <div class="sec-title">Faltaron países y se perdieron contactos</div>
+    <div class="alert amber">
+      <div class="alert-hd">⚠ Argentina no recibió llamadas</div>
+      <p>Argentina tiene 4,445 contactos (segundo mercado más grande de la base) y no recibió ninguna llamada ni mensaje en este lanzamiento. Se perdió completamente la oportunidad de impactar ese mercado.</p>
+    </div>
+    <div class="alert amber">
+      <div class="alert-hd">⚠ ~15% de contactos perdidos por falta de código de país</div>
+      <p>El formulario no forzaba el código de país al capturar el teléfono. Resultado: ~7,800 contactos sin país identificado que no pudieron recibir mensajes segmentados. Se resuelve con un cambio técnico en el form.</p>
+    </div>
+    <div class="alert red">
+      <div class="alert-hd">🔴 Faltó audio en algunos envíos</div>
+      <p>Hubo envíos que salieron sin el audio correspondiente. Este tipo de error se detecta en pruebas, no el día del lanzamiento.</p>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>País</th><th>Status</th><th>Nota</th></tr></thead>
+        <tbody>
+          <tr><td>🇲🇽 México</td><td style="color:#34d399">✓ Incluido</td><td></td></tr>
+          <tr><td>🇨🇴 Colombia</td><td style="color:#34d399">✓ Incluido</td><td></td></tr>
+          <tr><td>🇵🇪 Perú</td><td style="color:#34d399">✓ Incluido</td><td></td></tr>
+          <tr><td>🇦🇷 Argentina</td><td style="color:#f87171">✗ Excluido</td><td>2° mercado más grande. Prioridad alta.</td></tr>
+          <tr><td>🇺🇸 Estados Unidos</td><td style="color:#f87171">✗ Excluido</td><td>Pendiente integrar</td></tr>
+          <tr><td>🇧🇷 Brasil</td><td style="color:#f87171">✗ Excluido</td><td>Pendiente evaluar</td></tr>
+          <tr><td>🇪🇨 Ecuador</td><td style="color:#fbbf24">Decisión de costo</td><td>Excluido intencionalmente</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr/>
+
+  <!-- 07 PLAN -->
+  <section class="anim">
+    <div class="sec-label">07 · Plan de acción</div>
+    <div class="sec-title">Lo que cambia para el próximo lanzamiento</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Acción</th><th>Responsable</th><th>Prioridad</th></tr></thead>
+        <tbody>
+          <tr><td class="num">01</td><td>Máximo 10 min de intro. Value desde el inicio, sin excepción.</td><td style="color:#60a5fa">Melissa + Equipo</td><td><span class="pill r">Crítica</span></td></tr>
+          <tr><td class="num">02</td><td>Implementar WhatsApp Business API con número verificado por Meta.</td><td style="color:#60a5fa">Equipo Tech</td><td><span class="pill r">Crítica</span></td></tr>
+          <tr><td class="num">03</td><td>Programar todos los blasts con días de anticipación. Nunca en caliente.</td><td style="color:#60a5fa">Equipo Marketing</td><td><span class="pill r">Crítica</span></td></tr>
+          <tr><td class="num">04</td><td>Rediseñar formato de colaboraciones: 2 intervenciones × 5 min máximo.</td><td style="color:#60a5fa">Melissa</td><td><span class="pill a">Alta</span></td></tr>
+          <tr><td class="num">05</td><td>Incluir Argentina en todos los batches de llamadas y mensajes.</td><td style="color:#60a5fa">Equipo Ops</td><td><span class="pill a">Alta</span></td></tr>
+          <tr><td class="num">06</td><td>Hacer obligatorio el código de país en el formulario del website.</td><td style="color:#60a5fa">Equipo Tech</td><td><span class="pill a">Alta</span></td></tr>
+          <tr><td class="num">07</td><td>Evaluar arrancar a las 6:30PM CDMX para no hacer esperar a Argentina hasta medianoche.</td><td style="color:#60a5fa">Melissa</td><td><span class="pill m">Media</span></td></tr>
+          <tr><td class="num">08</td><td>Audio de llamadas listo y probado 48 horas antes de cada lanzamiento.</td><td style="color:#60a5fa">Equipo Ops</td><td><span class="pill m">Media</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <strong>Marketing con Melissa</strong> · Reporte interno post-lanzamiento · Marzo 2026<br>
+  <span style="font-size:0.68rem; margin-top:0.3rem; display:block">Basado en observaciones del live y feedback del equipo · El tráfico ya está, ahora vamos por la conversión</span>
+  <span style="font-size:0.68rem; margin-top:0.6rem; display:block; color: var(--ink-3);">Made with ♥ in San Francisco</span>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(e => {
+    e.forEach(x => { if(x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target); } });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.anim').forEach(el => io.observe(el));
+
+  const fio = new IntersectionObserver(e => {
+    e.forEach(x => {
+      if(x.isIntersecting){
+        x.target.querySelectorAll('.f-bar').forEach(b => {
+          const w = b.dataset.w; b.style.width='0%';
+          setTimeout(() => b.style.width = w, 150);
+        });
+        fio.unobserve(x.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.funnel').forEach(el => fio.observe(el));
+</script>
+</body>
+</html>
